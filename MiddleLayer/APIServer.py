@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import request
 
+from RPCObjects import *
+
 '''
 Flask is a python library for responding to HTTP requests
 http://flask.pocoo.org/docs/1.0/quickstart/
@@ -11,7 +13,7 @@ should be done in a separate class and imported into this one.
 '''
 
 # Global Debug Variable; Defines if verbose logging should be enabled
-debug = True
+debug = False
 
 # Create a Flask Object.
 app = Flask(__name__)
@@ -33,7 +35,6 @@ def index():
 # For accessing request data: https://stackoverflow.com/a/16664376
 @app.route('/', methods=["GET", "POST"])
 def collect_request():
-    data = None
     if request.args.has_key("r"):
         data = request.args["r"]
         if debug: print "Found JSON RPC Request in GET Variables!"
@@ -43,11 +44,12 @@ def collect_request():
     else:
         data = request.data
         if debug: print "Found JSON RPC Request in POST Data!"
+    req = JsonRpcRequest(data)
     return data
 
 
 # If the script is run from the command line
 if __name__ == "__main__":
     # Start a development server on port 8000
-    # http://localhost:8000/
+    # http://localhost:8000/test
     app.run(host="0.0.0.0", port=8000, debug=True)

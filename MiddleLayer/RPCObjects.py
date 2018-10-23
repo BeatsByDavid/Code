@@ -32,9 +32,22 @@ this out.
 '''
 class JsonRpcRequest():
 
-    def __init__(self):
+    def __init__(self, raw):
         super(self)
 
+        # Validation Stuff
+        if raw is None:         raise JsonRpcInvalidRequest
+        j = json.loads(raw)
+        if j is None:           raise JsonRpcParseError
+        if 'method' not in j:   raise JsonRpcInvalidRequest
+        if 'id' not in j:       raise JsonRpcInvalidRequest
+        if 'params' not in j:   raise JsonRpcInvalidRequest
+        if type(j['params']) is not dict: raise JsonRpcInvalidRequest
+
+        # Grab the values
+        self.method = j['method']
+        self.id = j['id']
+        self.params = j['params']
 
 '''
 A JsonRPC Response has a generic structure for success and failure
@@ -80,4 +93,7 @@ class JsonRpcException(Exception):
     pass
 
 class JsonRpcInvalidRequest(JsonRpcException):
+    pass
+
+class JsonRpcParseError(JsonRpcException):
     pass
