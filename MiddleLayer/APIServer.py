@@ -16,7 +16,7 @@ should be done in a separate class and imported into this one.
 '''
 
 # Global Debug Variable; Defines if verbose logging should be enabled
-debug = False
+debug = True
 
 # Create a GLOBAL instance of the router
 #   This will cause it to maintain its state between requests
@@ -70,6 +70,8 @@ def handle_request():
         # Make the response
         errResp = JsonRpcResponse()
         errResp.load_error(exc)
+
+        # Return the response
         return json.dumps(errResp)
 
 

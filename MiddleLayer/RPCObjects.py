@@ -1,5 +1,4 @@
 import json
-from enum import IntEnum
 
 '''
 This file contains definitions for the API request
@@ -36,13 +35,16 @@ class JsonRpcRequest(dict):
         # super.__init__(self)
 
         # Validation Stuff
-        if raw is None or len(str(raw)) == 0:         raise JsonRpcInvalidRequest("No Data Recieved!")
-        j = json.loads(raw)
+        if raw is None or len(str(raw)) == 0:   raise JsonRpcParseError("No data received!")
+        try:
+            j = json.loads(raw)
+        except:
+            raise JsonRpcParseError("Could not decode request!")
         if j is None:           raise JsonRpcParseError
-        if 'method' not in j:   raise JsonRpcInvalidRequest
-        if 'id' not in j:       raise JsonRpcInvalidRequest
-        if 'params' not in j:   raise JsonRpcInvalidRequest("Did Not Receive 'params'!")
-        if type(j['params']) is not dict: raise JsonRpcInvalidRequest
+        if 'method' not in j:   raise JsonRpcInvalidRequest("Did not receive 'method'")
+        if 'id' not in j:       raise JsonRpcInvalidRequest("Did not receive 'id'")
+        if 'params' not in j:   raise JsonRpcInvalidRequest("Did not receive 'params'")
+        if type(j['params']) is not dict: raise JsonRpcInvalidRequest("Invalid 'params' type")
 
         # Grab the values
         self.method = j['method']
@@ -109,30 +111,46 @@ class JsonRpcError(dict):
             self['message'] = 'Unknown System Error; ' + error.message
 
 
-
 class JsonRpcErrors():
     PARSE_ERROR         = -32700
     INVALID_REQUEST     = -32600
     METHOD_NOT_FOUND    = -32601
     INVALID_PARAMS      = -32602
     INTERNAL_ERROR      = -32603
-    UNKNOWN_ERROR       = 500
-
 
 
 # Base Class For Other Exceptions
 class JsonRpcException(Exception):
     def __init__(self, value):
-        super(self, value)
         self.msg = value
-        self.code = JsonRpcErrors.UNKNOWN_ERROR
+        self.code = JsonRpcErrors.INTERNAL_ERROR
+
+
+class JsonRpcParseError(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.PARSE_ERROR
+
 
 class JsonRpcInvalidRequest(JsonRpcException):
     def __init__(self, value):
         self.msg = value
         self.code = JsonRpcErrors.INVALID_REQUEST
 
-class JsonRpcParseError(JsonRpcException):
+
+class JsonRpcMethodNotFound(JsonRpcException):
     def __init__(self, value):
         self.msg = value
-        self.code = JsonRpcErrors.PARSE_ERROR
+        self.code = JsonRpcErrors.METHOD_NOT_FOUND
+
+
+class JsonRpcInvalidParams(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INVALID_PARAMS
+
+
+class JsonRpcInternalError(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INTERNAL_ERROR
