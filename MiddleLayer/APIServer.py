@@ -1,7 +1,10 @@
+import traceback
+
 from flask import Flask
 from flask import request
 
 from RPCObjects import *
+from APIRouter import Router
 
 '''
 Flask is a python library for responding to HTTP requests
@@ -14,6 +17,10 @@ should be done in a separate class and imported into this one.
 
 # Global Debug Variable; Defines if verbose logging should be enabled
 debug = False
+
+# Create a GLOBAL instance of the router
+#   This will cause it to maintain its state between requests
+router = Router()
 
 # Create a Flask Object.
 app = Flask(__name__)
@@ -34,7 +41,7 @@ def index():
 #     form-data 'r' variable
 # For accessing request data: https://stackoverflow.com/a/16664376
 @app.route('/', methods=["GET", "POST"])
-def collect_request():
+def handle_request():
     if request.args.has_key("r"):
         data = request.args["r"]
         if debug: print "Found JSON RPC Request in GET Variables!"
@@ -44,8 +51,26 @@ def collect_request():
     else:
         data = request.data
         if debug: print "Found JSON RPC Request in POST Data!"
-    req = JsonRpcRequest(data)
-    return data
+    try:
+        # Parse the request
+        req = JsonRpcRequest(data)
+        # Handle the request
+        ret = router.run(req)
+
+        # Make the response
+        resp = JsonRpcResponse()
+        resp['id'] = req.id
+        resp.load_success(ret)
+
+        # Return the response
+        return json.dumps(resp)
+    except Exception as exc:
+        if debug: traceback.print_exc()
+
+        # Make the response
+        errResp = JsonRpcResponse()
+        errResp.load_error(exc)
+        return json.dumps(errResp)
 
 
 # If the script is run from the command line

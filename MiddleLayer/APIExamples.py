@@ -1,5 +1,5 @@
 
 class info():
 
-    def test(self):
+    def test(self, data):
         return "This is the test function!"
