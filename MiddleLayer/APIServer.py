@@ -36,10 +36,11 @@ app = Flask(__name__)
 def index():
     return 'Hello World!'
 
+@app.route('/', defaults={'path': 'HomePage.html'})
 @app.route('/<path:path>')
 def path(path):
     root_dir = os.path.dirname(os.getcwd())
-    root_dir = os.path.join(root_dir, 'MiddleLayer')
+    root_dir = os.path.join(root_dir, 'MiddleLayer', 'test', 'Page')
     print root_dir + '/' + path
     return send_from_directory(root_dir, path)
 

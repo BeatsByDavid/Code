@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0ab14d-1b95-4a12-b015-138613298b4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIExamples.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIExamples.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APIRouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIRouter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RPCObjects.py" beforeDir="false" afterPath="$PROJECT_DIR$/RPCObjects.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,14 +39,14 @@
         <counts>
           <entry key="css" value="17" />
           <entry key="html" value="53" />
-          <entry key="py" value="8772" />
+          <entry key="py" value="8844" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="17" />
           <entry key="HTML" value="53" />
-          <entry key="Python" value="8772" />
+          <entry key="Python" value="8844" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -62,12 +58,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APIServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+            <state relative-caret-position="524">
+              <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
-                <marker date="1540923245525" expanded="true" signature="1037:1042" ph="..." />
-                <marker date="1540923245525" expanded="true" signature="1283:1286" ph="..." />
+                <marker date="1540923321572" expanded="true" signature="1037:1042" ph="..." />
+                <marker date="1540923321572" expanded="true" signature="1351:1354" ph="..." />
               </folding>
             </state>
           </provider>
@@ -304,12 +300,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/APIServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        <state relative-caret-position="524">
+          <caret line="38" column="51" lean-forward="true" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <marker date="1540923245525" expanded="true" signature="1037:1042" ph="..." />
-            <marker date="1540923245525" expanded="true" signature="1283:1286" ph="..." />
+            <marker date="1540923321572" expanded="true" signature="1037:1042" ph="..." />
+            <marker date="1540923321572" expanded="true" signature="1351:1354" ph="..." />
           </folding>
         </state>
       </provider>
