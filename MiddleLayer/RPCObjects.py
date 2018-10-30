@@ -1,6 +1,6 @@
 import json
 
-'''
+"""
 This file contains definitions for the API request
 and response objects as defined by JSON RPC 2.0 protocol
     https://www.jsonrpc.org/specification
@@ -10,7 +10,7 @@ Things in this file:
     JSONRPC_Response
     JSONRPC_Exceptions
     JSONRPC_Errors
-'''
+"""
 
 '''
 A JsonRPC Request must contain 3 elements: method, params, id

@@ -1,19 +1,21 @@
 import traceback
+import os
 
 from flask import Flask
 from flask import request
+from flask import send_from_directory
 
 from RPCObjects import *
 from APIRouter import Router
 
-'''
+"""
 Flask is a python library for responding to HTTP requests
 http://flask.pocoo.org/docs/1.0/quickstart/
 
 This class sets up the entry point for the API, but should
 not contain any actual information and data handling. These
 should be done in a separate class and imported into this one. 
-'''
+"""
 
 # Global Debug Variable; Defines if verbose logging should be enabled
 debug = True
@@ -25,6 +27,7 @@ router = Router()
 # Create a Flask Object.
 app = Flask(__name__)
 
+
 # This is a decorator; basically provides more metadata about the function
 # app.route([route]) tells Flask that the following function should be
 #     executed when a client sends a request to [route].
@@ -33,6 +36,13 @@ app = Flask(__name__)
 def index():
     return 'Hello World!'
 
+@app.route('/<path:path>')
+def path(path):
+    root_dir = os.path.dirname(os.getcwd())
+    root_dir = os.path.join(root_dir, 'MiddleLayer')
+    print root_dir + '/' + path
+    return send_from_directory(root_dir, path)
+
 
 # This is the route for all API calls
 # This function expects a Json RPC object to be send in one of the following places:
@@ -40,7 +50,7 @@ def index():
 #     get 'r' variable; ie /?r={}
 #     form-data 'r' variable
 # For accessing request data: https://stackoverflow.com/a/16664376
-@app.route('/', methods=["GET", "POST"])
+@app.route('/api', methods=["GET", "POST"])
 def handle_request():
     if request.args.has_key("r"):
         data = request.args["r"]

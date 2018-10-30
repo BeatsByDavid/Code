@@ -1,7 +1,7 @@
 from RPCObjects import *
 
 
-'''
+"""
 This file handles the routing of the API requests
 It receives the processed request, and calls the
 appropriate function and returns the response. Specific
@@ -15,7 +15,7 @@ about itself such as what functions are available and where
 they are. This allows us to iterate through the variables and
 methods available in the scope based on a string that we recieve
 from the user. In this case, it's passed in from the request
-'''
+"""
 
 # Function Imports
 from APIExamples import Info

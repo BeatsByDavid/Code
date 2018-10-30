@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0ab14d-1b95-4a12-b015-138613298b4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIExamples.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIExamples.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIRouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIRouter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APIServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/APIServer.py" afterDir="false" />
@@ -17,31 +18,39 @@
     <session id="434924208">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
           <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
           <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="8521" />
+          <entry key="css" value="17" />
+          <entry key="html" value="53" />
+          <entry key="py" value="8772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="8521" />
+          <entry key="CSS" value="17" />
+          <entry key="HTML" value="53" />
+          <entry key="Python" value="8772" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -50,24 +59,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/APIServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            <state relative-caret-position="569">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
-                <marker date="1540589691687" expanded="true" signature="988:993" ph="..." />
+                <marker date="1540923245525" expanded="true" signature="1037:1042" ph="..." />
+                <marker date="1540923245525" expanded="true" signature="1283:1286" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APIRouter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+            <state relative-caret-position="570">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -75,16 +103,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RPCObjects.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
+            <state relative-caret-position="-166">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding>
-                <marker date="1540590585007" expanded="true" signature="843:844" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="2396:2397" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="2421:2537" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="3057:3387" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="3409:3577" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="4101:4106" ph="..." />
-                <marker date="1540590585007" expanded="true" signature="4409:4515" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="843:844" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="2396:2397" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="2421:2537" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="3057:3387" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="3409:3577" ph="..." />
+                <marker date="1540923058386" expanded="true" signature="4101:4106" ph="..." />
               </folding>
             </state>
           </provider>
@@ -93,12 +120,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APIExamples.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <marker date="1540590065766" expanded="true" signature="126:127" ph="..." />
-                <marker date="1540590065766" expanded="true" signature="126:128" ph="..." />
-                <marker date="1540590065766" expanded="true" signature="126:132" ph="..." />
+                <marker date="1540923058385" expanded="true" signature="126:127" ph="..." />
+                <marker date="1540923058385" expanded="true" signature="126:128" ph="..." />
+                <marker date="1540923058385" expanded="true" signature="126:132" ph="..." />
               </folding>
             </state>
           </provider>
@@ -119,10 +146,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/APIServer.py" />
         <option value="$PROJECT_DIR$/APIExamples.py" />
         <option value="$PROJECT_DIR$/RPCObjects.py" />
         <option value="$PROJECT_DIR$/APIRouter.py" />
+        <option value="$PROJECT_DIR$/test/test.html" />
+        <option value="$PROJECT_DIR$/test/style.css" />
+        <option value="$PROJECT_DIR$/APIServer.py" />
       </list>
     </option>
   </component>
@@ -149,6 +178,11 @@
             <path>
               <item name="MiddleLayer" type="b2602c69:ProjectViewProjectNode" />
               <item name="MiddleLayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MiddleLayer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MiddleLayer" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +224,7 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -222,47 +256,61 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/APIExamples.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
-            <marker date="1540590065766" expanded="true" signature="126:127" ph="..." />
-            <marker date="1540590065766" expanded="true" signature="126:128" ph="..." />
-            <marker date="1540590065766" expanded="true" signature="126:132" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APIServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <marker date="1540589691687" expanded="true" signature="988:993" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RPCObjects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="55" column="43" selection-start-line="55" selection-start-column="43" selection-end-line="55" selection-end-column="43" />
-          <folding>
-            <marker date="1540590585007" expanded="true" signature="843:844" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="2396:2397" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="2421:2537" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="3057:3387" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="3409:3577" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="4101:4106" ph="..." />
-            <marker date="1540590585007" expanded="true" signature="4409:4515" ph="..." />
+            <marker date="1540923058385" expanded="true" signature="126:127" ph="..." />
+            <marker date="1540923058385" expanded="true" signature="126:128" ph="..." />
+            <marker date="1540923058385" expanded="true" signature="126:132" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/APIRouter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RPCObjects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <marker date="1540923058386" expanded="true" signature="843:844" ph="..." />
+            <marker date="1540923058386" expanded="true" signature="2396:2397" ph="..." />
+            <marker date="1540923058386" expanded="true" signature="2421:2537" ph="..." />
+            <marker date="1540923058386" expanded="true" signature="3057:3387" ph="..." />
+            <marker date="1540923058386" expanded="true" signature="3409:3577" ph="..." />
+            <marker date="1540923058386" expanded="true" signature="4101:4106" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APIServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1540923245525" expanded="true" signature="1037:1042" ph="..." />
+            <marker date="1540923245525" expanded="true" signature="1283:1286" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

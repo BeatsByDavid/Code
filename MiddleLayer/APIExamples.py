@@ -1,8 +1,8 @@
-'''
+"""
 Simple example for interfacing with the API
 while we work on developing the larger, more
 complex tasks
-'''
+"""
 
 
 class Info():
