@@ -1,5 +1,4 @@
 import json
-from enum import Enum
 
 '''
 This file contains definitions for the API request
@@ -30,11 +29,27 @@ must always have the value 2.0. Since we don't have any legacy
 applications that might be using an older version, we'll leave
 this out.
 '''
-class JsonRpcRequest():
+class JsonRpcRequest(dict):
 
-    def __init__(self):
-        super(self)
+    def __init__(self, raw):
+        # super.__init__(self)
 
+        # Validation Stuff
+        if raw is None or len(str(raw)) == 0:   raise JsonRpcParseError("No data received!")
+        try:
+            j = json.loads(raw)
+        except:
+            raise JsonRpcParseError("Could not decode request!")
+        if j is None:           raise JsonRpcParseError
+        if 'method' not in j:   raise JsonRpcInvalidRequest("Did not receive 'method'")
+        if 'id' not in j:       raise JsonRpcInvalidRequest("Did not receive 'id'")
+        if 'params' not in j:   raise JsonRpcInvalidRequest("Did not receive 'params'")
+        if type(j['params']) is not dict: raise JsonRpcInvalidRequest("Invalid 'params' type")
+
+        # Grab the values
+        self.method = j['method']
+        self.id = j['id']
+        self.params = j['params']
 
 '''
 A JsonRPC Response has a generic structure for success and failure
@@ -60,13 +75,43 @@ An error object will have the following format
     "data": {}
 }
 '''
-class JsonRpcResponse():
+class JsonRpcResponse(dict):
 
     def __init__(self):
-        super(self)
+        self['pass'] = True
+        self['result'] = {}
+        self['error'] = {}
+        self['id'] =  None
+
+    def load_success(self, result):
+        if type(result) is not dict:
+            result = {'raw': result}
+        self['result'] = result
+        self['pass'] = True
+        pass
+
+    def load_error(self, error):
+        # print type(error)
+        # print (type(error) is JsonRpcException)
+        # print (type(error) is JsonRpcInvalidRequest)
+        # print isinstance(error, JsonRpcException)
+        # print error
+        self['pass'] = False
+        self['error'] = JsonRpcError(error)
 
 
-class JsonRpcErrors(Enum):
+class JsonRpcError(dict):
+
+    def __init__(self, error):
+        if isinstance(error, JsonRpcException):
+            self['code'] = error.code
+            self['message'] = error.msg
+        elif isinstance(error, Exception):
+            self['code'] = JsonRpcErrors.UNKNOWN_ERROR
+            self['message'] = 'Unknown System Error; ' + error.message
+
+
+class JsonRpcErrors():
     PARSE_ERROR         = -32700
     INVALID_REQUEST     = -32600
     METHOD_NOT_FOUND    = -32601
@@ -74,10 +119,38 @@ class JsonRpcErrors(Enum):
     INTERNAL_ERROR      = -32603
 
 
-
 # Base Class For Other Exceptions
 class JsonRpcException(Exception):
-    pass
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INTERNAL_ERROR
+
+
+class JsonRpcParseError(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.PARSE_ERROR
+
 
 class JsonRpcInvalidRequest(JsonRpcException):
-    pass
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INVALID_REQUEST
+
+
+class JsonRpcMethodNotFound(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.METHOD_NOT_FOUND
+
+
+class JsonRpcInvalidParams(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INVALID_PARAMS
+
+
+class JsonRpcInternalError(JsonRpcException):
+    def __init__(self, value):
+        self.msg = value
+        self.code = JsonRpcErrors.INTERNAL_ERROR
