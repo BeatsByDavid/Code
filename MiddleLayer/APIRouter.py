@@ -19,7 +19,7 @@ from the user. In this case, it's passed in from the request
 
 # Function Imports
 from APIExamples import Info
-
+from celery_tasks import CeleryTasks
 
 class Router():
 
@@ -29,6 +29,7 @@ class Router():
     #   makes these persist across different requests
     def __init__(self):
         self.info = Info()
+        self.tasks = CeleryTasks()
         pass
 
     # Handle a request
@@ -54,4 +55,4 @@ class Router():
                 raise JsonRpcMethodNotFound("Could not find '%s'" % request.method)
 
         # Execute the function and return the response
-        return obj(request.params)
+        return obj(**request.params)
