@@ -58,3 +58,4 @@ class Router():
 
         # Execute the function and return the response
         return obj(**request.params)
+

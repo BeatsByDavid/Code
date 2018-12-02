@@ -11,5 +11,12 @@ DBSession = sessionmaker()
 DBSession.bind = engine
 session = DBSession()
 
+print type(session)
+
 ret = session.query(Location).first()
 print ret
+
+
+# from DownloadingQueries import DownloadingQueries
+# d = DownloadingQueries()
+# d.query_data()
