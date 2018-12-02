@@ -5,6 +5,8 @@ from flask import Flask
 from flask import request
 from flask import send_from_directory
 
+from flask_socketio import SocketIO, join_room
+
 from RPCObjects import *
 from APIRouter import Router
 
@@ -26,6 +28,12 @@ router = Router()
 
 # Create a Flask Object.
 app = Flask(__name__)
+
+# Create SocketIO App
+socketio = SocketIO(app, message_queue='amqp:///socketio')
+@socketio.on('connect')
+def socketio_connect():
+    pass
 
 
 # This is a decorator; basically provides more metadata about the function
@@ -90,4 +98,5 @@ def handle_request():
 if __name__ == "__main__":
     # Start a development server on port 8000
     # http://localhost:8000/test
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    # app.run(host="0.0.0.0", port=8000, debug=True)
+    socketio.run(app, host='0.0.0.0', port=8000, debug=True)

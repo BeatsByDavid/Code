@@ -107,7 +107,7 @@ class JsonRpcError(dict):
             self['code'] = error.code
             self['message'] = error.msg
         elif isinstance(error, Exception):
-            self['code'] = JsonRpcErrors.UNKNOWN_ERROR
+            self['code'] = JsonRpcErrors.INTERNAL_ERROR
             self['message'] = 'Unknown System Error; ' + error.message
 
 
