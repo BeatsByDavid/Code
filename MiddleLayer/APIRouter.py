@@ -31,7 +31,7 @@ class Router():
     def __init__(self):
         self.info = Info()
         self.tasks = CeleryTasks()
-	self.down = DownloadingQueries()
+        self.down = DownloadingQueries()
         pass
 
     # Handle a request
