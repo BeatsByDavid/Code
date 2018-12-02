@@ -30,7 +30,7 @@ class Router():
     def __init__(self):
         self.info = Info()
         self.tasks = CeleryTasks()
-        pass
+
 
     # Handle a request
     def run(self, request):
