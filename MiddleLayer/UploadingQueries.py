@@ -28,6 +28,8 @@ class UploadingQueries:
         session.add(new_item)
         session.commit()
 
+        ret = new_item.to_json()
+
         session.close()
 
-        return new_item
+        return ret

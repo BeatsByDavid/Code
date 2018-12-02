@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0ab14d-1b95-4a12-b015-138613298b4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/UploadingQueries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/celery_tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/celery_tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UploadingQueries.py" beforeDir="false" afterPath="$PROJECT_DIR$/UploadingQueries.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +42,7 @@
           <entry key="css" value="17" />
           <entry key="dummy" value="3" />
           <entry key="html" value="53" />
-          <entry key="py" value="15710" />
+          <entry key="py" value="15734" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -52,7 +50,7 @@
           <entry key="CSS" value="17" />
           <entry key="HTML" value="53" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="17930" />
+          <entry key="Python" value="17954" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -133,24 +131,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UploadingQueries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="510">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
-                <marker date="1543792725329" expanded="true" signature="205:206" ph="..." />
+                <marker date="1543793703991" expanded="true" signature="205:206" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/celery_tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+            <state relative-caret-position="555">
+              <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <marker date="1543792783694" expanded="true" signature="278:279" ph="..." />
@@ -219,8 +217,8 @@
         <option value="$PROJECT_DIR$/sql_testing.py" />
         <option value="$PROJECT_DIR$/APIRouter.py" />
         <option value="$PROJECT_DIR$/DownloadingQueries.py" />
-        <option value="$PROJECT_DIR$/UploadingQueries.py" />
         <option value="$PROJECT_DIR$/celery_tasks.py" />
+        <option value="$PROJECT_DIR$/UploadingQueries.py" />
       </list>
     </option>
   </component>
@@ -433,27 +431,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UploadingQueries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1543792725329" expanded="true" signature="205:206" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/celery_tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+        <state relative-caret-position="555">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <marker date="1543792783694" expanded="true" signature="278:279" ph="..." />
             <marker date="1543792783694" expanded="true" signature="278:283" ph="..." />
             <marker date="1543792783694" expanded="true" signature="314:323" ph="..." />
             <marker date="1543792783694" expanded="true" signature="806:884" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UploadingQueries.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1543793703991" expanded="true" signature="205:206" ph="..." />
           </folding>
         </state>
       </provider>
