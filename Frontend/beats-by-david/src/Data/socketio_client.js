@@ -14,5 +14,5 @@ socket.on('event', (data) => {
 });
 socket.on('new_data', (data) => {
     console.log("Socket 'new_data' event!");
-    console.log(JSON.parse(data));
+    console.log(data);
 })

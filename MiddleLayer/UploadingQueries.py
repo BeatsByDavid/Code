@@ -5,6 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
 
+
 class UploadingQueries:
 
     # Start some SQL Alchemy stuff
@@ -21,7 +22,7 @@ class UploadingQueries:
 
 
     def add_data(self, **kwargs):
-        # type: (dict) -> Data
+        # type: (dict) -> str
         session = self.generate_session()
 
         new_item = Data(**kwargs)

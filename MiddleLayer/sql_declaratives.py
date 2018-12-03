@@ -19,7 +19,7 @@ class Location(Base):
     latitude = Column(DECIMAL(6))
     longitude = Column(DECIMAL(6))
 
-    def to_json(self):
+    def to_json(self, depth=0):
         j = {}
         j['id'] = self.id
         j['name'] = self.name
@@ -37,7 +37,7 @@ class Device(Base):
     temp = Column(Float)
     decibel = Column(Float)
 
-    def to_json(self):
+    def to_json(self, depth=0):
         j = {}
         j['id'] = self.id
         j['locationid'] = self.location
@@ -62,7 +62,7 @@ class Data(Base):
     Location = relationship(Location)
     Device = relationship(Device)
 
-    def to_json(self):
+    def to_json(self, depth=1):
         epoch = datetime.datetime.utcfromtimestamp(0)
         j = {}
         j['id'] = self.id
@@ -72,5 +72,9 @@ class Data(Base):
         j['type'] = self.type
         j['value'] = str(self.value)
         j['units'] = self.units
+
+        if depth > 0:
+            j['location'] = self.Location.to_json(depth-1)
+            j['device'] = self.Device.to_json(depth-1)
 
         return j

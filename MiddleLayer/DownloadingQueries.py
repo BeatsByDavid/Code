@@ -74,10 +74,10 @@ class DownloadingQueries:
     #   ie. in sql_declaratives add a to_json to each table
     # FUTURE: Add a 'level' argument that converts foreign keys
     # to the actual objects for a certain depth
-    def sql_array_to_json_array(self, results):
+    def sql_array_to_json_array(self, results, depth=1):
         j = []
         for result in results:
-            j.append(result.to_json())
+            j.append(result.to_json(depth))
         return j
 
     # Method used to query the LOCATION table
