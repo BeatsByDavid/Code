@@ -1,6 +1,6 @@
 import React from "react"
-import 'mapEC.png'
-import 'style.css'
+import map from "./mapEC.png"
+import './style.css'
 
 class Page extends React.Component{
 	render (){
@@ -11,7 +11,7 @@ class Page extends React.Component{
 <h1>CU Boulder Engineering Center</h1>
 <p class="description"> We're here to help you find a peaceful and productive place to study. Don't deal with loud and overly hot areas of the Engineering Center again. <strong>Click the points to expand them.</strong></p>
 <div class="distribution-map" styles="width:50%; height: auto;">
-    <img src="mapEC.png" />
+    <img src= {map} alt="EC map"/>
     <button class="map-point" styles="top:26%;left:31.5%">
         <div class="content">
             <div class="centered-y">
