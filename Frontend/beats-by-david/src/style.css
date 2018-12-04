@@ -166,3 +166,89 @@ li.active a, a:hover, a:active {
 a:hover {
     color: limegreen;
 }
+
+.distribution-map .btn1 { /* ECAE */
+  position: absolute;
+  top: 26.1%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
+
+.distribution-map .btn2 { /* MAIN LOBBY */
+  position: absolute;
+  top: 52.35%;
+  left: 41.5%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
+
+.distribution-map .btn3 { /* ITLL */
+  position: absolute;
+  top: 65.5%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
+
+/*
+.distribution-map .btn4 { /* SOUTH LOBBY 
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
+*/
+
+.distribution-map .btn5 { /* CSEL */
+  position: absolute;
+  top: 78.5%;
+  left: 16.80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
+
+.distribution-map .btn6 { /* DISCOVERY LEARNING CENTER */
+  position: absolute;
+  top: 33.25%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px groove red;
+}
