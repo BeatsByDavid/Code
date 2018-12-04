@@ -1,6 +1,12 @@
+from __future__ import division
+from time import sleep
+
+import spidev
+
 info = """
 MCP3002 2-Channel 10 Bit ADC Driver
 Adapted From http://raspberry.io/projects/view/reading-from-a-mcp3002-analog-to-digital-converter/
+Also appearing at https://classes.engineering.wustl.edu/ese205/core/index.php?title=ADC_(MCP3002)_%2B_Raspberry_Pi_2
 
 Requirements: 
   spi_bcm2708 - sudo modprobe spi_bcm2708
@@ -17,20 +23,20 @@ Pinout:
   VSS     GND
   """
 
-from __future__ import division
-from time import sleep
-
-import spidev
+def bitstring(n):
+    s = bin(n)[2:]
+    return '0'*(8-len(s)) + s
 
 class MCP3002:
 
     def __init__(self, spi_channel=0):
         self.spi = spidev.SpiDev(0, spi_channel)
         self.spi.max_speed_hz = 1200000 # 1.2 MHz
-        cmd = 128
+        # self.spi.mode = 0
         
     def read(self, channel):
         cmd = 128
+        # cmd = 192 # Start bit + single-ended
         if channel:
             cmd += 32
         

@@ -4,7 +4,7 @@
 import requests
 from time import sleep
 
-from mcp3002 import MCP3002
+# from mcp3002 import MCP3002
 from RPCObjects import *
 
 tmp = "TMP35"
@@ -17,14 +17,16 @@ class BeatsByDavid:
     def __init__(self):
         # Connect to the ADC
         self.adc = MCP3002()
-        self.server_addr = 'https://davidkopala.com:8000/api'
+        self.server_addr = 'http://davidkopala.com:8000/api'
 
     def read_sound(self):
+        # return 5
         return self.adc.read(0)
 
     def read_temp(self):
+        # return (6, 6*(5/9) + 32)
         p_adc = self.adc.read(1)
-        v_adc = n_adc * 5
+        v_adc = p_adc * 5
 
         if tmp == "TMP35":
             offset = 0
@@ -34,7 +36,7 @@ class BeatsByDavid:
             slope = 1/10
         elif tmp == "TMP37":
             offset = 0
-            slop = 1/20
+            slope = 1/20
         else:
             offset = -1
             slope = 0
@@ -48,9 +50,13 @@ class BeatsByDavid:
         sound = self.read_sound()
         (deg_c, deg_f) = self.read_temp()
 
+        headers = {
+            "Content-Type": "application/json"
+        }
+
         sound_req = {
             "id": 'DEVICE_{0}_UPLOAD'.format(device_id),
-            "method": "up.upload_new_data_cel",
+            "method": "tasks.upload_new_data_cel",
             "params": {
                 "type": "Sound",
                 "value": sound,
@@ -62,7 +68,7 @@ class BeatsByDavid:
 
         temp_req = {
             "id": 'DEVICE_{0}_UPLOAD'.format(device_id),
-            "method": "up.upload_new_data_cel",
+            "method": "tasks.upload_new_data_cel",
             "params": {
                 "type": "Temperature",
                 "value": deg_f,
@@ -72,11 +78,11 @@ class BeatsByDavid:
             }
         }
 
-        r_sound = requests.post(self.server_addr, sound_req)
+        r_sound = requests.post(self.server_addr, json.dumps(sound_req), headers=headers)
         print r_sound.status_code, r_sound.reason
         print r_sound.text
 
-        r_temp = requests.post(self.server_addr, temp_req)
+        r_temp = requests.post(self.server_addr, json.dumps(temp_req), headers=headers)
         print r_temp.status_code, r_sound.reason
         print r_temp.text
 
