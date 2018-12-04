@@ -20,6 +20,7 @@ from the user. In this case, it's passed in from the request
 # Function Imports
 from APIExamples import Info
 from celery_tasks import CeleryTasks
+from DownloadingQueries import DownloadingQueries
 
 class Router():
 
@@ -30,6 +31,7 @@ class Router():
     def __init__(self):
         self.info = Info()
         self.tasks = CeleryTasks()
+        self.down = DownloadingQueries()
         pass
 
     # Handle a request
@@ -56,3 +58,4 @@ class Router():
 
         # Execute the function and return the response
         return obj(**request.params)
+

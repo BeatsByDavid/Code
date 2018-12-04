@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './Data/socketio_client'
+import Page from './page'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Page />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

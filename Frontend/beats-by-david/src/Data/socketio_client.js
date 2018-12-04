@@ -12,3 +12,7 @@ socket.on('connect', () => {
 socket.on('event', (data) => {
     console.log("Socket received: ", data);
 });
+socket.on('new_data', (data) => {
+    console.log("Socket 'new_data' event!");
+    console.log(data);
+})
