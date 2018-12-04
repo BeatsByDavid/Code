@@ -49,6 +49,7 @@ class Page extends React.Component{
                 <p>Current Studying Conditions:</p>
                 <p>__ Degrees Fahrenheit </p>
                 <p>__ Decibles.</p>
+                <p><a id="LinkCSEL" /*href="CSEL.js"*/>Link to Historical Data</a></p>
             </div>
         </div>
     </button>
