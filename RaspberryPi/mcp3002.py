@@ -35,8 +35,8 @@ class MCP3002:
         # self.spi.mode = 0
         
     def read(self, channel):
-        cmd = 128
-        # cmd = 192 # Start bit + single-ended
+        # cmd = 128
+        cmd = 192 # Start bit + single-ended
         if channel:
             cmd += 32
         
