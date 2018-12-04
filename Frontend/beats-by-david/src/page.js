@@ -1,63 +1,65 @@
 import React from "react"
 import map from "./mapEC.png"
 import './style.css'
-import { Button } from 'react-bootstrap'
+import { Button, Popovers} from 'react-bootstrap'
+import { Chart } from "react-google-charts";
 
 class Page extends React.Component{
 	render (){
 		return (<body>
-  <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylessheet' type='text/css' />
-<link href='//fonts.googleapis.com/css?family=Roboto:100,300,400,700,900' rel='stylessheet' type='text/css' />
 
 <h1>CU Boulder Engineering Center</h1>
 <p class="description"> We're here to help you find a peaceful and productive place to study. Don't deal with loud and overly hot areas of the Engineering Center again. <strong>Click the points to expand them.</strong></p>
 <div class="distribution-map" styles="width:50%; height: auto;">
     <img src= {map} alt="EC map"/>
-    <button class="map-point" styles="top:26%;left:31.5%">
+    <button class="btn1">
         <div class="content">
             <div class="centered-y">
                 <h2>ECEA</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="ecea.html" styles="text-transform: capitalize;"><br/></a></p>
+                <p>Current Studying Conditions:</p>
+                <p>__ Degrees Fahrenheit </p>
+                <p>__ Decibles.</p>
             </div>
         </div>
     </button>
-    <button class="map-point" styles="top:53%;left:41.5%">
+    <button class="btn2">
         <div class="content">
             <div class="centered-y">
-                <h2>Main Lobby</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="ml.html" styles="text-transform: capitalize;"><br/>Click here for the daily trend.</a></p>
+                <h2>MAIN LOBBY</h2>
+                <p>Current Studying Conditions:</p>
+                <p>__ Degrees Fahrenheit </p>
+                <p>__ Decibles.</p>
             </div>
         </div>
     </button>
-    <button class="map-point" styles="top:66.5%;left:77%">
+    <button class="btn3">
         <div class="content">
             <div class="centered-y">
                 <h2>ITLL</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="itll.html" styles="text-transform: capitalize;"><br/>Click here for the daily trend.</a></p>
+                <p>Current Studying Conditions:</p>
+                <p>__ Degrees Fahrenheit </p>
+                <p>__ Decibles.</p>
             </div>
         </div>
     </button>
-    <button class="map-point" styles="top:75%;left:25%">
-        <div class="content">
-            <div class="centered-y">
-                <h2>South Lobby</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="sl.html" styles="text-transform: capitalize;"><br/>Click here for the daily trend.</a></p>
-            </div>
-        </div>
-    </button>
-    <button class="map-point" styles="top:78.5%;left:17%">
+    <button class="btn5">
         <div class="content">
             <div class="centered-y">
                 <h2>CSEL</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="csel.html" styles="text-transform: capitalize;"><br/>Click here for the daily trend.</a></p>
+                <p>Current Studying Conditions:</p>
+                <p>__ Degrees Fahrenheit </p>
+                <p>__ Decibles.</p>
+                <p><a id="LinkCSEL" /*href="CSEL.js"*/>Link to Historical Data</a></p>
             </div>
         </div>
     </button>
-    <button class="map-point" styles="top:34.5%;left:75%">
+    <button class="btn6">
         <div class="content">
             <div class="centered-y">
-                <h2>Discovery Learning Center</h2>
-                <p>Looks like its ___ degrees and medium volume. <a href="dlc.html" styles="text-transform: capitalize;"><br/>Click here for the daily trend.</a></p>
+                <h3>DISCOVERY LEARNING CENTER</h3>
+                <p>Current Studying Conditions:</p>
+                <p>__ Degrees Fahrenheit </p>
+                <p>__ Decibles.</p>
             </div>
         </div>
     </button>
@@ -68,8 +70,7 @@ class Page extends React.Component{
 </styles>
   <script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js' />
 
-
-</body> )
+</body>)
 	}
 }
 
