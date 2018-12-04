@@ -61,7 +61,7 @@ class Page extends React.Component{
         </div>
     </button>
 </div>
-<a id="link" href="form.html" styles="text-transform: capitalize; hover-color: red;">Questions/Concerns</a>
+<a id="link" href="form.html" styles="text-transform: capitalize; hover-color: red;">About Us</a>
 <styles>
 
 </styles>
