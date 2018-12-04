@@ -32,7 +32,7 @@ class MCP3002:
     def __init__(self, spi_channel=0):
         self.spi = spidev.SpiDev(0, spi_channel)
         self.spi.max_speed_hz = 1200000 # 1.2 MHz
-        # self.spi.mode = 0
+        self.spi.mode = 0
         
     def read(self, channel):
         # cmd = 128

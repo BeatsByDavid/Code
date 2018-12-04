@@ -1,0 +1,11 @@
+[Unit]
+Description=Beats By David Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/Desktop/BeatsByDavid/RaspberryPi/beatsbydavid.py
+
+[Install]
+WantedBy=multi-user.target
+
