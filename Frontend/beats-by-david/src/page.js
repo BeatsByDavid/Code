@@ -12,9 +12,7 @@ class Page extends React.Component{
 <p class="description"> We're here to help you find a peaceful and productive place to study. Don't deal with loud and overly hot areas of the Engineering Center again. <strong>Click the points to expand them.</strong></p>
 <div class="distribution-map" styles="width:50%; height: auto;">
     <img src= {map} alt="EC map"/>
-    <button class="btn1">
-        ECAE
-    </button>
+    <button class="btn1"></button>
     <button class="btn2">
         Lobby
     </button>

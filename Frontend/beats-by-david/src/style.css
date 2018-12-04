@@ -97,13 +97,13 @@ li.active a, a:hover, a:active {
 
 .distribution-map {
   position: relative;
-  width: 100%;
+  width: 725px;
   padding: 20px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 .distribution-map > img {
-  width: 100%;
+  width: 725px;
   position: relative;
   margin: 0;
   padding: 0;
@@ -179,12 +179,22 @@ a:hover {
   font-weight: bold;
   cursor: pointer;
   border: 3px groove red;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  -o-transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  -webkit-transition: opacity 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out, z-index 0.25s ease-in-out;
+  -webkit-transition-delay: 0.25s, 0.25s, 0.25s, 0.25s;
+  transition: opacity 0.25s ease-in-out 0.25s, width 0.25s ease-in-out 0.25s, height 0.25s ease-in-out 0.25s, z-index 0.25s ease-in-out 0.25s;
+  background: rgba(26, 26, 26, 0.85);
+  border: 5px solid   #FF0000;
+
 }
 
 .distribution-map .btn2 { /* MAIN LOBBY */
   position: absolute;
-  top: 52.35%;
-  left: 41.5%;
+  top: 52.6%;
+  left: 44%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #white;
@@ -197,8 +207,8 @@ a:hover {
 
 .distribution-map .btn3 { /* ITLL */
   position: absolute;
-  top: 65.5%;
-  left: 77%;
+  top: 66.5%;
+  left: 81.75%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #white;
@@ -227,8 +237,8 @@ a:hover {
 
 .distribution-map .btn5 { /* CSEL */
   position: absolute;
-  top: 78.5%;
-  left: 16.80%;
+  top: 79.5%;
+  left: 17.5%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #white;
@@ -242,7 +252,7 @@ a:hover {
 .distribution-map .btn6 { /* DISCOVERY LEARNING CENTER */
   position: absolute;
   top: 33.25%;
-  left: 75%;
+  left: 79.5%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #white;
