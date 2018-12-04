@@ -3,9 +3,9 @@
 
 import requests
 from time import sleep
+import json
 
-# from mcp3002 import MCP3002
-from RPCObjects import *
+from mcp3002 import MCP3002
 
 tmp = "TMP35"
 
