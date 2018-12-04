@@ -1,6 +1,7 @@
 import React from "react"
 import map from "./mapEC.png"
 import './style.css'
+import { Button } from 'react-bootstrap'
 
 class Page extends React.Component{
 	render (){
