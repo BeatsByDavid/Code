@@ -13,18 +13,10 @@ class Page extends React.Component{
 <div class="distribution-map" styles="width:50%; height: auto;">
     <img src= {map} alt="EC map"/>
     <button class="btn1"></button>
-    <button class="btn2">
-        Lobby
-    </button>
-    <button class="btn3">
-        ITLL
-    </button>
-    <button class="btn5">
-        CSEL
-    </button>
-    <button class="btn6">
-        DLC
-    </button>
+    <button class="btn2"></button>
+    <button class="btn3"></button>
+    <button class="btn5"></button>
+    <button class="btn6"></button>
 </div>
 <a id="link" href="form.html" styles="text-transform: capitalize; hover-color: red;">About Us</a>
 <styles>
