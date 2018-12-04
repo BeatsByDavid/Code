@@ -27,6 +27,8 @@ class BeatsByDavid:
         # return (6, 6*(5/9) + 32)
         p_adc = self.adc.read(0)
         v_adc = p_adc * 5
+	mv_adc = v_adc * 1000
+	print 'mv_adc: {0}'.format(mv_adc)
 
         if tmp == "TMP35":
             offset = 0
@@ -41,7 +43,7 @@ class BeatsByDavid:
             offset = -1
             slope = 0
         
-        deg_c = offset + (v_adc * slope)
+        deg_c = offset + (mv_adc * slope)
         deg_f = 32 + (9.0/5.0)*deg_c
 
         return (deg_c, deg_f)
