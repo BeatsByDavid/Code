@@ -12,13 +12,13 @@ class DownloadingQueries:
     def __init__(self):
         self.engine = create_engine(DB_STRING)
         Base.metadata.bind = self.engine
-        self.db_session = sessionmaker()
-        self.db_session.bind = self.engine
 
     # Create a connection to the DB
     def generate_session(self):
         # type: () -> Session
-        return self.db_session()
+	db_session = sessionmaker()
+        db_session.bind = self.engine
+        return db_session()
 
     # Creates a query based on named arguments
     #   data_type   -> The SQL Table to query
@@ -64,7 +64,7 @@ class DownloadingQueries:
         # Limit the number or rows returned
         if 'limit' in kwargs:
             q = q.limit(kwargs['limit'])
-
+	session.close()
         return q
 
     # Helper function that converts an array or row returned from
