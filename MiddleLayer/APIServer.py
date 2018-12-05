@@ -68,6 +68,8 @@ def handle_request():
         data = request.form["r"]
         if debug: print "Found JSON RPC Request in FORM Variables!"
     else:
+	print type(request.get_data())
+	print request.get_data()
         data = request.data
         if debug: print "Found JSON RPC Request in POST Data!"
     try:

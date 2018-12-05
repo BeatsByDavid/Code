@@ -26,7 +26,7 @@ class CeleryTasks:
         socketio.emit('event', message, namespace='/namespace')
         print 'Sent: \'{0}\''.format(message)
 
-    def upload_new_data(**kwargs):
+    def upload_new_data(self, **kwargs):
         CeleryTasks.upload_new_data.delay(**kwargs)
         return "OK"
 
@@ -34,5 +34,5 @@ class CeleryTasks:
     def upload_new_data_cel(**kwargs):
         u = UploadingQueries()
         new = u.add_data(**kwargs)
-        socketio.emit('new_data', new.to_json(), '/namespace')
+        socketio.emit('new_data', new, namespace='/namespace')
         print 'Added new data via celery task!'
