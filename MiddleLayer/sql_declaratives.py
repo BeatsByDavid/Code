@@ -6,6 +6,7 @@ import json
 from sqlalchemy import Column, ForeignKey, Integer, String, DECIMAL, Float, TIMESTAMP, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
 
 
 Base = declarative_base()
@@ -54,7 +55,8 @@ class Data(Base):
     locationid = Column(Integer, ForeignKey('locations.id'))
     deviceid = Column(Integer, ForeignKey('devices.id'))
     # timestamp = Column(TIMESTAMP, default=datetime.datetime.utcnow)
-    timestamp = Column(DateTime, default=datetime.datetime.utcnow())
+    # timestamp = Column(DateTime, default=datetime.datetime.utcnow())
+    timestamp = Column(DateTime, server_default=func.now())
     type = Column(String(20), nullable=False)
     value = Column(DECIMAL(5), nullable=False)
     units = Column(String(10))

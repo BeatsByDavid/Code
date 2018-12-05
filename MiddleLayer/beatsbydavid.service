@@ -1,0 +1,10 @@
+[Unit]
+Description=Beats By David API Service Handler
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/ubuntu/BeatsByDavid/Repos/Code/MiddleLayer/APIServer.py
+
+[Install]
+WantedBy=multi-user.target
