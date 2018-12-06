@@ -3,9 +3,42 @@ import map from "./mapEC.png"
 import './style.css'
 import { Button, Popovers} from 'react-bootstrap'
 import { Chart } from "react-google-charts";
+import SIO from "./Data/socketio_client"
 
 class Page extends React.Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            Temp: 0,
+            Sound: 0
+        }
+        this.sio = new SIO();
+        this.sio.cb = (data) => {
+            this.cb(data)
+        }
+    }
+
+    cb(data) {
+        if (data.type === "Temperature") {
+            this.setState({
+                Temp:data.value,
+                Sound:this.state.Sound
+            })  
+        }
+
+        if (data.type === "Sound") {
+            this.setState({
+                Temp:this.state.Temp,
+                Sound:(data.value)*1000
+            })
+        }
+    }
+
+
 	render (){
+        console.log("HERE")
+        console.log(this.state)
 		return (<body>
 
 <h1>CU Boulder Engineering Center</h1>
@@ -47,8 +80,8 @@ class Page extends React.Component{
             <div class="centered-y">
                 <h2>CSEL</h2>
                 <p>Current Studying Conditions:</p>
-                <p>__ Degrees Fahrenheit </p>
-                <p>__ Decibles.</p>
+                <p>{this.state.Temp} Degrees Fahrenheit </p>
+                <p>{this.state.Sound} Decibles.</p>
                 <p><a id="LinkCSEL" /*href="CSEL.js"*/>Link to Historical Data</a></p>
             </div>
         </div>
