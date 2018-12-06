@@ -82,7 +82,7 @@ class Page extends React.Component{
                 <p>Current Studying Conditions:</p>
                 <p>{this.state.Temp} Degrees Fahrenheit </p>
                 <p>{this.state.Sound} Decibles.</p>
-                <p><a id="LinkCSEL" /*href="CSEL.js"*/>Link to Historical Data</a></p>
+                <p><a id="LinkCSEL" href="http://beats.davidkopala.com:8001">Link to Historical Data</a></p>
             </div>
         </div>
     </button>
