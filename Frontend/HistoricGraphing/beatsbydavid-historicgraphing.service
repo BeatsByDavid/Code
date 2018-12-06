@@ -1,0 +1,10 @@
+[Unit]
+Description=Beats By David Graphing Component
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/ubuntu/BeatsByDavid/Repos/Code/Frontend/HistoricGraphing/hello.py
+
+[Install]
+WantedBy=multi-user.target
