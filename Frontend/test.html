@@ -1,0 +1,37 @@
+{% block body %}
+ 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <div id="chart_div"  style="width: 900px; height: 300px;"><div>
+ 
+ 
+<script type='text/javascript'>//<![CDATA[ 
+ 
+google.load('visualization', '1', {packages: ['corechart', 'bar']});
+google.setOnLoadCallback(drawBasic);
+ 
+function drawBasic() {
+ //console.log({{temp}});
+      var data = google.visualization.arrayToDataTable([
+        ['Time', 'Temperature', 'Sound' , { role: 'style' }],
+        ['1:00pm', {{temp[0]}}, {{sound[0]}}, 'gold'],
+        ['2:00pm', {{temp[1]}}, {{sound[1]}},'silver'],
+        ['3:00pm', {{temp[2]}}, {{sound[2]}},'brown'],
+        ['4:00pm', {{temp[3]}}, {{sound[3]}},'blue']
+      ]);
+ 
+       var options = {
+          title: 'Temperature',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+ 
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+ 
+      chart.draw(data, options);
+    }
+//]]>  
+ 
+</script>
+ 
+ 
+{% endblock %}
