@@ -3,7 +3,7 @@ language: python
 services: 
   - docker
   
-before-install:
+before_install:
   - docker pull davidkopala/beatsbydavid:submission
   - docker run -d -p 127.0.0.1:8000:8000 davidkopala/beatsbydavid:submission
   - docker ps -a
